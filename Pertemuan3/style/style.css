@@ -1,0 +1,34 @@
+ *
+ {
+    margin:0 auto;
+ }
+
+#header
+{
+
+
+
+}
+
+
+#content
+{
+    display:block;
+    /*background-color:#16213E ; */
+}
+
+.calc-container
+{
+    display:flex ;
+    justify-content: center;
+    padding:0 1rem;
+
+}
+
+
+.profile-pic
+{
+    border-radius:1rem;
+    width:5rem;
+    height:auto;
+}
