@@ -1,0 +1,54 @@
+*
+{
+    margin : 0 auto;
+}
+body
+{
+    font-family: sans-serif;
+}
+#content
+{
+    padding:2rem;
+    display:flex;
+    justify-content:center ;
+}
+.profile
+{
+    display:inline-block;
+    border-radius:1rem ;
+    background-color:#FDFDFD ;
+    box-shadow: 2px 1px 9px 0px rgba(56,55,55,0.59);
+}
+
+.profile-container
+{
+    padding:0.5rem 1rem;
+    display:flex ;
+    justify-content:center;
+    flex-flow:column;
+}
+.photo img
+{
+    max-width:20rem;
+    height:auto;
+}
+.age
+{
+    font-size:1rem;
+}
+
+.description
+{  
+    max-width:18rem;
+    margin:0.7rem 0;
+}
+
+.hobbies
+{
+    width:100%;
+    text-align:left;
+}
+.no-bullet
+{
+    text-decoration:none ;
+}
