@@ -1,0 +1,168 @@
+body {
+	background-color: #395144;
+	font-family: sans-serif;
+}
+
+#header {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+#content {
+	display: flex;
+	justify-content: center;
+	padding: 1rem;
+}
+
+
+.frame-comp {
+	display: inline-block;
+	border: 1px #AA8B56 solid;
+	padding: 0.5rem 1rem;
+	margin: 1rem 0;
+	border-radius: 0.5rem;
+}
+
+.input-field {
+	display: flex;
+	flex-direction: column;
+	margin: 0.5rem 1rem;
+}
+
+.input-field label {
+	margin: 0.3rem 0;
+	color: #AA8B56;
+}
+
+.input-field input {
+	margin: 0.3rem 0;
+	padding: 0.2rem 0.1rem;
+	background-color: #F0EBCE;
+	outline: #AA8B56;
+	border: #F0EBCE 1px solid;
+	border-radius: 0.3rem;
+}
+
+.input-field textarea {
+	margin: 0.3rem 0;
+	padding: 0.2rem 0.1rem;
+	background-color: #F0EBCE;
+	outline: #AA8B56;
+	border: #F0EBCE 1px solid;
+	border-radius: 0.3rem;
+}
+
+.frame-comp button {
+	width: 100%;
+	margin: 0.5rem 0;
+}
+
+.btn {
+	display: inline-block;
+	padding: 0.5rem 1rem;
+	margin: 1rem 1rem;
+	border-radius: 0.3rem;
+	cursor: pointer;
+}
+
+.btn-primary {
+	background-color: #AA8B56;
+	color: #F0EBCE;
+	outline: #AA8B56;
+	border: #AA8B56;
+}
+
+
+.btn-secondary {
+	background-color: #F0EBCE;
+	color: #AA8B56;
+	outline: #F0EBCE;
+	border: #F0EBCE;
+}
+
+.btn-alert {
+	background-color: #aa5656;
+	color: #F0EBCE;
+	outline: #aa5656;
+	border: #aa5656;
+}
+
+.btn-primary:active {
+	transform: scale(0.9);
+	transition: 0.4s;
+}
+
+.btn-secondary:active {
+	transform: scale(0.9);
+	transition: 0.4s;
+}
+
+.btn-alert:active {
+	transform: scale(0.9);
+	transition: 0.4s;
+}
+
+
+
+
+.card-data-mahasiswa {
+	display: inline-block;
+	background-color: #4E6C50;
+	box-shadow: 10px 12px 41px -10px rgba(0, 0, 0, 0.48);
+	max-width: 350px;
+	margin: 1rem;
+	border-radius: 0.5rem;
+}
+
+.card-data-mahasiswa:hover {
+	transform: scale(1.1);
+	transition: 0.6s;
+}
+
+.card-data-mahasiswa-container {
+	padding: 0 0.5rem 0 0rem;
+	display: grid;
+	grid-template-columns: 0.1fr 0.9fr;
+	grid-template-areas:
+		"id-mhs"
+		"bio-mhs";
+}
+
+.data-id {
+	grid-area: "id-mhs";
+	padding: 0.5rem;
+	font-size: 2em;
+	background-color: #AA8B56;
+	color: #F0EBCE;
+	border-radius: 0.5rem 0 0 0.5rem;
+}
+
+.biodata-mahasiswa {
+	grid-area: "bio-mhs";
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	/* background-color: aqua; */
+	margin-left: 1rem;
+	padding: 0.4rem 0.2rem;
+}
+
+.data-nama {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #AA8B56;
+	margin-top: 0.5rem;
+}
+
+.data-alamat p {
+	margin: 0.1rem 0;
+	color: #F0EBCE;
+	opacity: 0.6;
+}
+
+.action-data {
+	display: flex;
+	flex-direction: row;
+	justify-content: start;
+}

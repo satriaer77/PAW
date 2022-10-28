@@ -1,10 +1,9 @@
 <?php
-var_dump($_SERVER["REQUEST_METHOD"]);
 if(isset($_POST['action']))
 {
 	include('connectDb.php');
 
-	$idMhs 		   = (int)$_POST['idMhs'];
+	$idMhs 	       = (int)$_POST['idMhs'];
 
 	$sqlFetchMhs   = "SELECT * FROM mahasiswa WHERE id_mhs=$idMhs";
 	$sqlFetchFkl   = "SELECT * FROM fakultas";
