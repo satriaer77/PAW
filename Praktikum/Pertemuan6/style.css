@@ -1,0 +1,56 @@
+#contents
+{
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.input-field input
+{
+    display:flex;
+    flex-direction: column;
+    padding:0.5rem 0.3rem; 
+    margin:0.5rem 0 1rem 0;
+}
+.input-field label
+{
+    font-weight: bold;
+
+    margin:1rem 0;
+}
+
+.form-action button
+{
+    width:100%;
+    padding:0.5rem 1rem;
+    background-color: rgb(5, 167, 78);
+    color:whitesmoke;
+    border: none;
+    cursor: pointer;
+}
+
+.form-action:active
+{
+    transform: scale(0.8);
+}
+.checkbox-field
+{
+    padding:0.4rem 0;
+}
+
+.table-comp th , .table-comp td
+{
+    padding:0.5rem 2rem ;
+    text-align: left;
+    border: 1px solid #CCC;
+}
+.table-comp  tr:nth-child(even)
+{
+    background: #CCC;
+}
+.table-comp  tr:nth-child(odd) 
+{
+    background: #FFF;
+}

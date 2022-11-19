@@ -4,7 +4,7 @@ if(isset($_SESSION["id_user"]) && isset($_SESSION["status"]) )
 {
     if($_SESSION["status"] == "login")
     {
-        require "dataMahasiswa.php";
+        header('location:tabelMahasiswa.php');
     }
 }
 else 
@@ -18,13 +18,13 @@ else
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Login</title>
 </head>
 <body>
 
     <section id="contents">
-        <div class="form-field">
-            <form method="POST" action="loginProcess.php">
+        <form method="POST" action="tabelMahasiswa.php">
+            <div class="form-field">
                 <div class="input-field">
                     <label for="username">Username</label>
                     <input type="text" id="username" placeholder="Enter Username" name="username">
@@ -36,8 +36,11 @@ else
                 <div class="form-action">
                     <button type="submit">Login</button>
                 </div>
-            </form>
-        </div>
+                <div class="checkbox-field">
+                    <input type="checkbox" name="remember" id="remember"> <label for="remember">Remember Me</label>
+                </div>
+            </div>
+        </form>
     </section>
 
 

@@ -6,6 +6,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
 
     $username = $_POST["username"];
     $password = $_POST["password"];
+    $remember = $_POST["remember"];
     
    
     
@@ -14,21 +15,32 @@ if($_SERVER["REQUEST_METHOD"] == "POST")
     {
         if($p["username"] == $username && $p["password"] == sha1($password))
         {
-            session_start();
-            $_SESSION["id_user"] = $p["id_user"];
-            $_SESSION["status"]  = "login";
-            header('location:tabelMahasiswa.php');
+            if($remember == 'on')
+            {
+                session_start();
+                $_SESSION["id_user"] = $p["id_user"];
+                $_SESSION["status"]  = "login";
+                header('location:tabelMahasiswa.php');
+            }
+            else
+            {
+                $randId = sha1($username); 
+                header('location:tabelMahasiswa.php?login='.$randId);
+            }
+           
         } 
         else
         {
             $_SESSION["status"]  = "no-login";
+            header('location:index.php');
+
         }
     }
 }
 else
 {
-    echo"Anda tidak berhak mengakses halaman ini";
-    echo"<br><a href='index.php'>Kembali ke halaman utama</a>";
+    header('location:index.php');
+
 }
 
 

@@ -4,13 +4,13 @@
 function translateHari($day)
 {
   $days = [
-  "Monday"  => "Senin",
-  "Tuesday" => "Selasa",
-  "Wenesday"=> "Rabu",
-  "Thursday"=> "Kamis",
-  "Friday"  => "Jumat",
-  "Saturday"=> "Sabtu",
-  "Sunday"  => "Minggu"
+  "Monday"   => "Senin",
+  "Tuesday"  => "Selasa",
+  "Wednesday"=> "Rabu",
+  "Thursday" => "Kamis",
+  "Friday"   => "Jumat",
+  "Saturday" => "Sabtu",
+  "Sunday"   => "Minggu"
   ];
 
   return $days[$day];
