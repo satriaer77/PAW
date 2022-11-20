@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
-
+use App\Models\MahasiswaModel;
 
 class PawController extends Controller
 {
     public function mahasiswa()
     {
-        $dataMahasiwa = DB::table("tbl_mahasiswa")->get();
-       var_dump($dataMahasiwa);
+        $dataMahasiwa = MahasiswaModel::get();
+      
         return view('mahasiswa',[
             'title' => "Halaman Mahasiswa",
             'page'  => "dataMhs",
@@ -24,6 +24,15 @@ class PawController extends Controller
             'page'  => "inputMhs"
         ]);
     }
+    public function editMahasiswa(Request $request)
+    {
+        $dataMahasiwa = DB::table("tbl_mahasiswa")->where("nrp",$request->nrp)->first();
+        return view('edit-mahasiswa',[
+            'title' => "Halaman Edit Mahasiswa",
+            'page'  => "inputMhs",
+            'dms'   => $dataMahasiwa
+        ]);
+    }
     public function about()
     {
         return view('about',[
@@ -31,6 +40,9 @@ class PawController extends Controller
             'page'  => "about"
         ]);
     }  
+
+
+    
     public function insertMahasiswa(Request $request)
     {
         $mhs = MahasiswaModel::create([
@@ -40,7 +52,25 @@ class PawController extends Controller
             'alamat' => $request->alamat
         ]);
 
-         return redirect()->route('/');
+         return redirect("/");
+    }
+
+    public function updateMahasiswa(Request $request)
+    {
+        MahasiswaModel::where("nrp",$request->nrpf)->update([
+            'nama'   => $request->nama,
+            'email'  => $request->email,
+            'alamat' => $request->alamat
+        ]);
+
+         return redirect("/");
+    }
+
+    public function deleteMahasiswa(Request $request)
+    {
+        $mhs = MahasiswaModel::destroy($request->nrp);
+
+         return redirect("/");
     }
 
 }

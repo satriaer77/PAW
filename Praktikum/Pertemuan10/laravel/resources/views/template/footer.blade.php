@@ -1,27 +1,35 @@
 
 @section('footer')
-<nav class="bg-slate-300 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-50">
-  <div class="container flex flex-wrap justify-between items-center mx-auto">
-  <a href="{{url('/')}}" class="flex items-center">
-        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Simple Siakad</span>
-  </a>
-  <div class="hidden w-full md:block md:w-auto" id="navbar-default">
-      <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
-        <li>
-          <a href="{{url('/')}}" class="block py-2 pr-4 pl-3 text-gray-700  bg-blue-700 rounded md:bg-transparent @if($page == "dataMhs")  md:text-blue-700 @endif md:p-0 dark:text-white" @if($page == "dataMhs")  aria-current="page" @endif>Data Mahasiswa</a>
-        </li>
-        <li>
-          <a href="{{url('/inputData')}}" class="block py-2 pr-4 pl-3 text-gray-700  bg-blue-700 rounded md:bg-transparent @if($page == "inputMhs") md:text-blue-700 @endif md:p-0 " @if($page == "inputMhs") aria-current="page"  @endif>Input Data</a>
-        </li>
-        <li>
-          <a href="{{url('/about')}}" class="block py-2 pr-4 pl-3 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 @if($page == "about") md:text-blue-700 @endif">About Me</a>
-        </li>
-      </ul>
-   </div>
+<nav class="bg-slate-300 border-gray-200 px-4 sm:px-4 py-3 mt-10 rounded bg-primary">
+    <div class="grid grid-cols-4 justify-center gap-3 mx-4 my-2">
+        <div class="flex flex-col">
+            <img src="{{url('logo.png')}}" alt="Logo" class="w-16 mb-3">
+            <span class="text-sm text-white font-medium">Jurusan Teknik Informatika Universitas Trunojoyo Madura</span>
+            <span class="text-sm text-white op-8">Jl. Raya Telang, Perumahan Telang Inda, Telang, Kec. Kamal, Kabupaten Bangkalan, Jawa Timur 69162</span>
+            <span class="text-sm text-white op-8">Kampus Universitas Trunojoyo Madura</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="text-sm text-white font-medium mb-4">Contact</span>
+            <span class="text-sm text-white op-8">Telp : </span>
+            <span class="text-sm text-white op-8">Fax  :</span>
+            <span class="text-sm text-white op-8">Email:</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="text-sm text-white font-medium mb-4">Layanan</span>
+            <span class="text-sm text-white op-8">Pembayaran UKT</span>
+            <span class="text-sm text-white op-8">Pendaftaran KP</span>
+            <span class="text-sm text-white op-8">Pendaftaran Wisuda</span>
+            <span class="text-sm text-white op-8">Administrasi</span>
+        </div>
+        <div class="flex flex-col">
+            <span class="text-sm text-white font-medium mb-4">Resource</span>
+            <span class="text-sm text-white op-8">e-Journal</span>
+            <span class="text-sm text-white op-8">Portal Tugas Akhir</span>
+            <span class="text-sm text-white op-8">Website Resmi Kampus</span>
+            <span class="text-sm text-white op-8">Download Administrasi</span>
+        </div>
+    </div> 
 
 
-    
-    
-  </div>
 </nav>
 @endsection

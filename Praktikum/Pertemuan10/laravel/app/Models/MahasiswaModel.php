@@ -8,8 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class MahasiswaModel extends Model
 {
    use HasFactory;
-
-   protected $table = 'tbl_mahasiswa';
-   protected $primaryKey = 'nrp';
-   protected $fillable = ['nrp', 'nama', 'email', 'alamat'];
+   const UPDATED_AT = null;
+   const CREATED_AT = null;
+   
+   protected $table        = 'tbl_mahasiswa';
+   protected $primaryKey   = 'nrp';
+   protected $fillable     = ['nrp', 'nama', 'email', 'alamat'];
 }

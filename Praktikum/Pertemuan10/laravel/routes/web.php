@@ -18,4 +18,8 @@ use App\Http\Controllers\PawController;
 
 Route::get('/','\App\Http\Controllers\PawController@mahasiswa');
 Route::get('/inputData','\App\Http\Controllers\PawController@inputMahasiswa');
+Route::post('/editData','\App\Http\Controllers\PawController@editMahasiswa');
+Route::post('/updateData','\App\Http\Controllers\PawController@updateMahasiswa');
 Route::get('/about','\App\Http\Controllers\PawController@about');
+Route::post('/insertData','\App\Http\Controllers\PawController@insertMahasiswa');
+Route::post('/deleteData','\App\Http\Controllers\PawController@deleteMahasiswa');

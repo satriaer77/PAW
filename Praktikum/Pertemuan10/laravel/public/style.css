@@ -1,0 +1,24 @@
+.bg-primary
+{
+    background-color:rgb(118, 0, 187) !important;
+}
+
+
+
+
+.text-primary
+{
+    color:rgb(118, 0, 187) !important;
+}
+
+.op-8
+{
+    opacity:0.8;
+}
+
+
+.btn-primary
+{
+    background-color:rgb(118, 0, 187) !important;
+    border:5px solid rgb(118, 0, 187);
+}
